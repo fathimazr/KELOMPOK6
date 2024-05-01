@@ -4,31 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library System</title>
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <!-- Color Palettes -->
   <style>
     .color-primary { color: #A79277; }
     .color-secondary { color: #D1BB9E; }
     .color-tertiary { color: #EAD8C0; }
     .color-quaternary { color: #FFF2E1; }
-
+ 
     .bg-primary { background-color: #A79277; }
     .bg-secondary { background-color: #D1BB9E; }
     .bg-tertiary { background-color: #EAD8C0; }
     .bg-quaternary { background-color: #FFF2E1; }
+    
+    /* Adjust margin below navbar */
+    .mt-nav {
+      margin-top: 2rem; /* You can adjust this value as needed */
+    }
   </style>
-  <!-- Feather Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body class="bg-quaternary">
   <!-- Navbar Start-->
-  <nav class="bg-secondary">
+  <nav class="navbar bg-secondary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex">
@@ -45,7 +44,7 @@
       </div>
     </div>
   </nav>
-<!-- Navbar Ends -->
+  <!-- Navbar Ends -->
 <!-- Main Page Start -->
   <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <div class="px-4 py-6 sm:px-0">
