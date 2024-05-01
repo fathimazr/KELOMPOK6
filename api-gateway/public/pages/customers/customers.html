@@ -1,44 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/static/pages/customers/style.css">
-    <title>Customer management</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Customer Management</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+   .color-primary { color: #A79277; }
+   .color-secondary { color: #D1BB9E; }
+   .color-tertiary { color: #EAD8C0; }
+   .color-quaternary { color: #FFF2E1; }
+
+   .bg-primary { background-color: #A79277; }
+   .bg-secondary { background-color: #D1BB9E; }
+   .bg-tertiary { background-color: #EAD8C0; }
+   .bg-quaternary { background-color: #FFF2E1; }
+   
+   /* Adjust margin below navbar */
+   .mt-nav {
+     margin-top: 2rem; /* You can adjust this value as needed */
+   }
+ </style>
 </head>
-<body>
-    <h1>Customers</h1>
-    <table id="customer-table">
-        <thead>
-            <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Birthday</th>
-                <th>Address</th>
-            </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-    </table>
-    
-    <h2>Add a customer</h2>
-    <form id="create-form">
-        <label for="firstname-input">Firstname</label>
-        <input type="text" id="firstname-input" name="firstname"/>
-        <br/>
-        <label for="lastname-input">Lastname</label>
-        <input type="text" id="lastname-input" name="lastname"/>
-        <br/>
-        <label for="birthday-input">Birthday</label>
-        <input type="date" id="birthday-input" name="birthday"/>
-        <br/>
-        <label for="address-input">Address</label>
-        <input type="text" id="address-input" name="address"/>
-        <br/>
-        <input type="submit" value="Create" id="submit-button"/>
-    </form>
+<body class="bg-quaternary">
+ <nav class="bg-primary">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex justify-between h-16">
+       <div class="flex">
+         <div class="flex-shrink-0 flex items-center">
+           <a href="#" class="font-bold text-xl text-white">Library System Group 6</a>
+         </div>
+       </div>
+       <div class="flex items-center">
+         <a href="#" class="bg-tertiary text-primary hover:bg-secondary px-3 py-2 rounded-md text-sm font-medium flex items-center">
+           <i class="fas fa-home mr-2"></i>
+           Home
+         </a>
+       </div>
+     </div>
+   </div>
+ </nav>
 
-    <script src="/static/pages/customers/main.js"></script>
+ <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+   <div class="px-4 py-6 sm:px-0">
+     <h1 class="text-2xl font-bold color-primary mb-4">Add a customer</h1>
+     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+       <form id="create-form" class="px-6 py-8">
+         <div class="mb-4">
+           <label for="firstname-input" class="block text-gray-700 font-bold mb-2">Firstname</label>
+           <input type="text" id="firstname-input" name="firstname" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+         </div>
+         <div class="mb-4">
+           <label for="lastname-input" class="block text-gray-700 font-bold mb-2">Lastname</label>
+           <input type="text" id="lastname-input" name="lastname" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+         </div>
+         <div class="mb-4">
+           <label for="birthday-input" class="block text-gray-700 font-bold mb-2">Birthday</label>
+           <input type="date" id="birthday-input" name="birthday" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+         </div>
+         <div class="mb-6">
+           <label for="address-input" class="block text-gray-700 font-bold mb-2">Address</label>
+           <input type="text" id="address-input" name="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+         </div>
+         <div class="flex justify-end">
+           <!-- Change input type to button to prevent form submission -->
+           <button type="button" id="submit-button" class="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create</button>
+         </div>
+       </form>
+     </div>
 
+     <div class="mt-nav">
+       <h1 class="text-2xl font-bold color-primary mb-4">Customers</h1>
+       <div class="bg-white shadow-md rounded-lg overflow-hidden">
+         <table class="w-full">
+           <thead class="bg-primary text-white">
+             <tr>
+               <th class="px-6 py-3 text-left">Firstname</th>
+               <th class="px-6 py-3 text-left">Lastname</th>
+               <th class="px-6 py-3 text-left">Birthday</th>
+               <th class="px-6 py-3 text-left">Address</th>
+             </tr>
+           </thead>
+           <tbody id="table-body" class="text-gray-700">
+             <!-- Table rows will be inserted here -->
+           </tbody>
+         </table>
+       </div>
+     </div>
+   </div>
+ </main>
+ </script>
 </body>
 </html>
