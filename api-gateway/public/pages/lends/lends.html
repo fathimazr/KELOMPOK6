@@ -236,10 +236,54 @@
         <h1 class="text-2xl font-bold text-grey-800 mb-4">Lend a book</h1>
     </div>
     <div id="create-lend-lists">
-        <h2 class="font-bold">Customers</h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="font-bold">Customers</h1>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a
+                      href="#"
+                      class="bg-tertiary text-primary hover:bg-secondary px-3 py-2 rounded-md text-sm font-bold flex items-center"
+                    >
+                      Add
+                    </a>
+                  </div>
+            </div>
+        </div>
         <!-- Customer Lists -->
         <ul id="customer-lists"></ul>
-        <h2 class="font-bold">Books</h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="font-bold">Books</h1>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <!-- Datepicker -->
+                    
+<div class="relative max-w-sm">
+    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+       <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+        </svg>
+    </div>
+    <input datepicker datepicker-autohide type="text" class="bg-tertiary border border-primary text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+  </div>  
+                </div>
+                <div class="flex items-center">
+                    <a
+                      href="#"
+                      class="bg-tertiary text-primary hover:bg-secondary px-3 py-2 rounded-md text-sm font-bold flex items-center"
+                    >
+                      Add
+                    </a>
+                </div>
+            </div>
+        </div>
         <!-- Book Lists -->
         <ul id="book-lists"></ul>
     </div>
