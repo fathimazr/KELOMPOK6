@@ -5,7 +5,9 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <title>Customer Management</title>
+ <!-- Tailwind CSS -->
  <script src="https://cdn.tailwindcss.com"></script>
+ <!-- Font -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  <style>
    .color-primary { color: #A79277; }
@@ -25,24 +27,25 @@
  </style>
 </head>
 <body class="bg-quaternary">
- <nav class="bg-primary">
-   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="flex justify-between h-16">
-       <div class="flex">
-         <div class="flex-shrink-0 flex items-center">
-           <a href="#" class="font-bold text-xl text-white">Library System Group 6</a>
-         </div>
-       </div>
-       <div class="flex items-center">
-         <a href="http://localhost:3003" class="bg-tertiary text-primary hover:bg-secondary px-3 py-2 rounded-md text-sm font-medium flex items-center">
-           <i class="fas fa-home mr-2"></i>
-           Home
-         </a>
-       </div>
-     </div>
-   </div>
- </nav>
-
+ <!-- Navbar Start -->
+  <nav class="navbar bg-secondary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#" class="font-bold text-xl text-grey-800">Library System Group 6</a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <a href="http://localhost:3003" class="bg-tertiary text-primary hover:bg-secondary px-3 py-2 rounded-md text-sm font-medium flex items-center">
+            <i class="fas fa-home mr-2"></i>
+            Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!-- Navbar Ends -->
  <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
    <div class="px-4 py-6 sm:px-0">
      <h1 class="text-2xl font-bold color-primary mb-4">Add a customer</h1>
