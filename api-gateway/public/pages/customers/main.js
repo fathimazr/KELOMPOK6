@@ -55,6 +55,9 @@ function addCustomer(customerObj) {
             tdAddress.appendChild(document.createTextNode(customer.address));
             row.append(tdFirstname, tdLastname, tdBirthday, tdAddress);
             tbody.appendChild(row);
+
+            document.getElementById("create-form").reset();
+
         })
         .catch(err => console.log(err));
 }

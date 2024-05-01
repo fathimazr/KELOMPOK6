@@ -9,17 +9,17 @@ let customers = [];
 // Create some mock data
 customers.push({
     id: uuid(),
-    firstname: "Max",
-    lastname: "Mustermann",
-    address: "Musterstr. 12",
-    birthday: new Date(1990, 9, 15).getTime()
+    firstname: "Shavira",
+    lastname: "Sae",
+    address: "Jl. jalan",
+    birthday: new Date(2003, 9, 15).getTime()
 },
 {
     id: uuid(),
-    firstname: "Klaus",
-    lastname: "Müller",
-    address: "Hauptstr. 2",
-    birthday: new Date(1965, 3, 21).getTime()
+    firstname: "Hasbi",
+    lastname: "Hasbi",
+    address: "Jl. telkom",
+    birthday: new Date(2003, 3, 21).getTime()
 }
 );
 
