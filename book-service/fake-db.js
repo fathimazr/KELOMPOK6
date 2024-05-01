@@ -11,22 +11,22 @@ let books = [];
 books.push({
     id: uuid(),
     isbn: "978-3-548-26308-3",
-    title: "Es",
+    title: "Harry Potter",
     author: "Stephen King",
-    publisher: "Ullstein",
+    publisher: "Gramedia",
     year: 2005,
-    genre: "Horror",
-    condition: "New",
+    genre: "Education", 
+    condition: "New", 
     available: true
 },
 {
     id: uuid(),
     isbn: "978-3-548-26308-3",
-    title: "Schnelles Denken, langsames Denken",
-    author: "Daniel Kahneman",
-    publisher: "Penguin Verlag",
+    title: "Cinderella",
+    author: "Shae",
+    publisher: "Gramedia",
     year: 2016,
-    genre: "Sachbuch",
+    genre: "Fiction",
     condition: "New",
     available: true
 });
@@ -47,7 +47,7 @@ const updateBook = book => {
     // Finds the index where the condition function returns true
     const index = books.findIndex(element => element.id === book.id);
     books[index] = book;
-    return books[index];
+    return books[index];zzzz
 }
 
 const removeBook = id => {
