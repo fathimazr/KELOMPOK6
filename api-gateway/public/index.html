@@ -24,7 +24,7 @@
       <div class="flex justify-between h-16">
         <div class="flex">
           <div class="flex-shrink-0 flex items-center">
-            <a href="#" class="font-bold text-xl text-white">Library System</a>
+            <a href="#" class="font-bold text-xl text-white">Library System Group 6</a>
           </div>
         </div>
         <div class="flex items-center">
@@ -40,27 +40,31 @@
   <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <div class="px-4 py-6 sm:px-0">
       <h1 class="text-2xl font-bold color-primary">What do you want to manage?</h1>
-      <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
-        <div class="bg-tertiary shadow-md rounded-lg px-6 py-8 text-center transition duration-300 hover:bg-secondary">
-          <a href="/customers">
-            <h2 class="text-lg font-semibold color-primary">Customers</h2>
-            <p class="mt-2 color-primary">Manage customer information</p>
-          </a>
+      <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-1">
+        <div class="bg-tertiary shadow-md rounded-lg px-6 py-8 text-center transition duration-300 hover:bg-secondary flex flex-col justify-center card-clickable" onclick="manageCustomers()">
+          <i class="fas fa-users text-4xl color-primary mb-4"></i>
+          <h2 class="text-2xl font-bold text-gray-800">Customers</h2>
+          <p class="mt-2 text-gray-600">Manage customer information</p>
         </div>
-        <div class="bg-tertiary shadow-md rounded-lg px-6 py-8 text-center transition duration-300 hover:bg-secondary">
-          <a href="/books">
-            <h2 class="text-lg font-semibold color-primary">Books</h2>
-            <p class="mt-2 color-primary">Manage book collection</p>
-          </a>
+        <div class="bg-tertiary shadow-md rounded-lg px-6 py-8 text-center transition duration-300 hover:bg-secondary flex flex-col justify-center card-clickable" onclick="manageBooks()">
+          <i class="fas fa-book text-4xl color-primary mb-4"></i>
+          <h2 class="text-2xl font-bold text-gray-800">Books</h2>
+          <p class="mt-2 text-gray-600">Manage book collection</p>
         </div>
-        <div class="bg-tertiary shadow-md rounded-lg px-6 py-8 text-center transition duration-300 hover:bg-secondary">
-          <a href="/lends">
-            <h2 class="text-lg font-semibold color-primary">Lends</h2>
-            <p class="mt-2 color-primary">Manage book lending</p>
-          </a>
+        <div class="bg-tertiary shadow-md rounded-lg px-6 py-8 text-center transition duration-300 hover:bg-secondary flex flex-col justify-center card-clickable" onclick="manageLending()">
+          <i class="fas fa-handshake text-4xl color-primary mb-4"></i>
+          <h2 class="text-2xl font-bold text-gray-800">Lends</h2>
+          <p class="mt-2 text-gray-600">Manage book lending</p>
         </div>
       </div>
     </div>
   </main>
+  
+<style>
+    .card-clickable {
+        cursor: pointer;
+    }
+</style>
+
 </body>
 </html>
