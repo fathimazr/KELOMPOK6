@@ -66,7 +66,7 @@
          </div>
          <div class="flex justify-end">
            <!-- Change input type to button to prevent form submission -->
-           <button type="button" id="submit-button" class="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create</button>
+           <input type="submit" value="Create" id="submit-button" class="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"/>
          </div>
        </form>
      </div>
@@ -74,16 +74,16 @@
      <div class="mt-nav">
        <h1 class="text-2xl font-bold color-primary mb-4">Customers</h1>
        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-         <table class="w-full">
+         <table id="customer-table" class="w-full">
            <thead class="bg-primary text-white">
              <tr>
-               <th class="px-6 py-3 text-left">Firstname</th>
-               <th class="px-6 py-3 text-left">Lastname</th>
-               <th class="px-6 py-3 text-left">Birthday</th>
-               <th class="px-6 py-3 text-left">Address</th>
+               <th class="px-6 py-3 text-center">Firstname</th>
+               <th class="px-6 py-3 text-center">Lastname</th>
+               <th class="px-6 py-3 text-center">Birthday</th>
+               <th class="px-6 py-3 text-center">Address</th>
              </tr>
            </thead>
-           <tbody id="table-body" class="text-gray-700">
+           <tbody id="table-body" class="text-gray-700 text-center">
              <!-- Table rows will be inserted here -->
            </tbody>
          </table>
@@ -91,6 +91,6 @@
      </div>
    </div>
  </main>
- </script>
+<script src="/static/pages/customers/main.js"></script>
 </body>
 </html>
