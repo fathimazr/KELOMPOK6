@@ -45,5 +45,10 @@ app.post('/setAvailable', (req, res) => {
     res.json(db.setAvailable(req.body.id));
 })
 
+app.get('/getAll', (req, res) => {
+    const books = db.getAllBooks();
+    res.json(books);
+});
+
 // Tell express to listen to communication on the specified port after the configuration is done.
 app.listen(PORT, () => console.log(`Book Service listening on ${PORT}`));

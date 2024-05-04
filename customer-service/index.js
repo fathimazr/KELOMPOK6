@@ -41,5 +41,10 @@ app.post('/getId', (req, res) => {
     res.json(db.getCustomerById(req.body.id));
 })
 
+app.get('/getAll', (req, res) => {
+    const customers = db.getAllCustomers();
+    res.json(customers);
+});
+
 // Tell express to listen to communication on the specified port after the configuration is done.
 app.listen(PORT, () => console.log(`Customer Service listening on ${PORT}`));

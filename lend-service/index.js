@@ -53,5 +53,10 @@ app.post('/getByCustomer', (req, res) => {
     res.json(db.getLendByCustomer(req.body.customerId));
 })
 
+app.get('/getAll', (req, res) => {
+    const lends = db.getAllLends();
+    res.json(lends);
+});
+
 // Tell express to listen to communication on the specified port after the configuration is done.
 app.listen(PORT, () => console.log(`Lend Service listening on ${PORT}`));
