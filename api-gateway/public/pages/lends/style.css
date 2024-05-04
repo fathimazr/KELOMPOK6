@@ -40,3 +40,26 @@ tbody tr td{
 .added {
     background-color: lightblue;
 }
+
+.table-container {
+    background-color: #ead8c0; /* Same as your previous lend table */
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.customer-table {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.customer-li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.button-container {
+    margin-left: auto; /* Push the button to the right */
+}

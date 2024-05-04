@@ -37,12 +37,13 @@ const returnBook = (lendId, bookId) => {
         if (bookId === book.id) {
             // If the book was returned late we have to add to the late fees
             if (book.returndate < Date.now()) {
-                manipLend.customer.fees += 2;
+                manipLend.customer.fees += 2000;
             }
             return false;
         }
         return true;
-    })
+    });
+
     return manipLend;
 }
 

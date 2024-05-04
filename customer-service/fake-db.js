@@ -10,16 +10,30 @@ let customers = [];
 customers.push({
     id: uuid(),
     firstname: "Shavira",
-    lastname: "Sae",
+    lastname: "Eka",
     address: "Jl. jalan",
     birthday: new Date(2003, 9, 15).getTime()
 },
 {
     id: uuid(),
     firstname: "Hasbi",
-    lastname: "Hasbi",
+    lastname: "Asshiddiqqi",
     address: "Jl. telkom",
     birthday: new Date(2003, 3, 21).getTime()
+},
+{
+    id: uuid(),
+    firstname: "Fathimah",
+    lastname: "Azzahra",
+    address: "Jl. telkom",
+    birthday: new Date(2003, 8, 3).getTime()
+},
+{
+    id: uuid(),
+    firstname: "Josia",
+    lastname: "Fortino",
+    address: "Jl. telkom",
+    birthday: new Date(2003, 3, 12).getTime()
 }
 );
 
