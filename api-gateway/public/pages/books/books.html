@@ -63,7 +63,7 @@
           </div>
           <div class="flex items-center">
             <a
-              href="#"
+              href="http://localhost:3003"
               class="bg-tertiary text-primary hover:bg-secondary px-3 py-2 rounded-md text-sm font-medium flex items-center"
             >
               <i class="fas fa-home mr-2"></i>
@@ -391,6 +391,61 @@
                 />
               </div>
             </div>
+            <div class="flex space-x-4">
+              <div class="flex items-start mb-6">
+                  <div class="flex items-center h-5">
+                      <input
+                          id="baru"
+                          type="radio"
+                          name="status"
+                          value="baru"
+                          class="w-add h-add border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                          required
+                      />
+                  </div>
+                  <label
+                      for="baru"
+                      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-800"
+                      >Baru?</label
+                  >
+              </div>
+              <div class="flex items-start mb-6">
+                  <div class="flex items-center h-5">
+                      <input
+                          id="lama"
+                          type="radio"
+                          name="status"
+                          value="lama"
+                          class="w-add h-add border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                          required
+                      />
+                  </div>
+                  <label
+                      for="lama"
+                      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-800"
+                      >Lama?</label
+                  >
+              </div>
+          </div>
+          
+          <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                  const checkboxes = document.querySelectorAll('.checkbox');
+          
+                  checkboxes.forEach(checkbox => {
+                      checkbox.addEventListener('change', function() {
+                          if (this.checked) {
+                              checkboxes.forEach(cb => {
+                                  if (cb !== this) {
+                                      cb.checked = false;
+                                  }
+                              });
+                          }
+                      });
+                  });
+              });
+          </script>
+            </div>
             <div class="flex items-start mb-6">
               <div class="flex items-center h-5">
                 <input
@@ -407,12 +462,16 @@
                 >Available?</label
               >
             </div>
-            <button
-              type="submit"
-              class="text-white bg-black hover:bg-blue-800 focus:ring-add focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-black dark:hover:bg-yellow-900 dark:focus:ring-blue-800"
-            >
-              Create
-            </button>
+            <div>
+                <button
+                type="submit"
+                class="text-white bg-black hover:bg-blue-800 focus:ring-add focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-black dark:hover:bg-yellow-900 dark:focus:ring-blue-800"
+                value="create"
+                >
+                Create
+              </button>
+            </div>
+           
           </form>
         </form>
       </div>
