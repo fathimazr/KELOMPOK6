@@ -22,11 +22,19 @@ app.get('/', (req, res) => {
 });
 
 app.post('/add', (req, res) => {
-    res.json(db.addBook(req.body));
+    const newBook = req.body;
+    const addedBook = db.addBook(newBook);
+    res.json(addedBook);
 });
 
 app.post('/update', (req, res) => {
-    res.json(db.updateBook(req.body));
+    const updatedBook = req.body;
+    const updated = db.updateBook(updatedBook);
+    if (updated) {
+        res.send('Book updated successfully.');
+    } else {
+        res.status(404).send('Book not found.');
+    }
 });
 
 app.post('/delete', (req, res) => {
