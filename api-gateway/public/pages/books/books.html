@@ -231,75 +231,9 @@
                 </th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="bg-tertiary border-b dark:border-gray-700">
-                <th
-                  scope="row"
-                  class="px-6 py-add font-bold text-gray-800 blackspace-nowrap"
-                >
-                  Pride and Prejudice
-                </th>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  Jane Austen
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  Penguin Classics
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">1813</td>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  978-0141439518
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  Fiksi Klasik
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">Lama</td>
-                <td class="px-6 py-add text-gray-800 font-medium">Tidak</td>
-              </tr>
-              <tr class="bg-tertiary border-b dark:border-gray-700">
-                <th
-                  scope="row"
-                  class="px-6 py-add font-bold text-gray-800 blackspace-nowrap"
-                >
-                  Cerita Si Junu Berlari
-                </th>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  Ani Anaktadu
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">Soraya</td>
-                <td class="px-6 py-add text-gray-800 font-medium">1938</td>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  978-0141449512
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  Fiksi Anak-Anak
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">Baru</td>
-                <td class="px-6 py-add text-gray-800 font-medium">Tidak</td>
-              </tr>
-              <tr class="bg-tertiary border-b dark:border-gray-700">
-                <th
-                  scope="row"
-                  class="px-6 py-add font-bold text-gray-800 blackspace-nowrap"
-                >
-                  Asal Usul Kerjaan Majapahit
-                </th>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  Jon F Kenedi
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  MD Writing
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">1173</td>
-                <td class="px-6 py-add text-gray-800 font-medium">
-                  978-0441239513
-                </td>
-                <td class="px-6 py-add text-gray-800 font-medium">Legenda</td>
-                <td class="px-6 py-add text-gray-800 font-medium">Lama</td>
-                <td class="px-6 py-add text-gray-800 font-medium">Iya</td>
-              </tr>
-            </tbody>
+            <tbody id="table-body" class="text-black"></tbody>
           </table>
-        </div>
+        </div>s
       </div>
       <!-- Input Field Start -->
       <h1 class="text-2xl font-bold text-grey-800 mb-add">Add a book</h1>
@@ -309,164 +243,122 @@
             <div class="grid gap-6 mb-6 md:grid-cols-2">
               <div>
                 <label
-                  for="book-title"
+                  for="title-input"
                   class="block mb-2 text-sm font-bold text-gray-900 dark:text-grey-800"
                   >Title</label
                 >
                 <input
                   type="text"
-                  id="book-title"
+                  id="title-input"
                   class="bg-quaternary border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-600 dark:text-grey-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Tenggelamnya Kapal Van Der Wijck"
+                  name="title"
                   required
                 />
               </div>
               <div>
                 <label
-                  for="book-author"
+                  for="author-input"
                   class="block mb-2 text-sm font-bold text-gray-900"
                   >Author</label
                 >
                 <input
                   type="text"
-                  id="book-author"
+                  id="author-input"
                   class="bg-quaternary border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-600 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Buya Hamka"
+                  name="author"
                   required
                 />
               </div>
               <div>
                 <label
-                  for="book-publisher"
+                  for="publisher-input"
                   class="block mb-2 text-sm font-bold text-gray-800"
                   >Publisher</label
                 >
                 <input
                   type="text"
-                  id="book-publisher"
+                  id="publisher-input"
                   class="bg-quaternary border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-600 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="GPSN Kreatif"
+                  name="publisher"
                   required
                 />
               </div>
               <div>
                 <label
-                  for="book-year"
+                  for="year-input"
                   class="block mb-2 text-sm font-bold text-gray-800"
                   >Year</label
                 >
                 <input
                   type="number"
-                  id="book-year"
+                  id="year-input"
                   class="bg-quaternary border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-600 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="1938"
+                  name="year"
                   required
                 />
               </div>
               <div>
                 <label
-                  for="book-isbn"
+                  for="isbn-input"
                   class="block mb-2 text-sm font-bold text-gray-800"
                   >ISBN</label
                 >
                 <input
                   type="number"
-                  id="website"
+                  id="isbn-input"
                   class="bg-quaternary border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-600 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="9786022504160"
+                  name="isbn"
                   required
                 />
               </div>
               <div>
                 <label
-                  for="book-genre"
+                  for="genre-input"
                   class="block mb-2 text-sm font-bold text-gray-800"
                   >Genre</label
                 >
                 <input
                   type="text"
-                  id="book-genre"
+                  id="genre-input"
                   class="bg-quaternary border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-600 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Romantis"
+                  name="genre"
                 />
               </div>
             </div>
             <div class="flex space-x-4">
-              <div class="flex items-start mb-6">
-                  <div class="flex items-center h-5">
-                      <input
-                          id="baru"
-                          type="radio"
-                          name="status"
-                          value="baru"
-                          class="w-add h-add border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                          required
-                      />
-                  </div>
-                  <label
-                      for="baru"
-                      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-800"
-                      >Baru?</label
-                  >
-              </div>
-              <div class="flex items-start mb-6">
-                  <div class="flex items-center h-5">
-                      <input
-                          id="lama"
-                          type="radio"
-                          name="status"
-                          value="lama"
-                          class="w-add h-add border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                          required
-                      />
-                  </div>
-                  <label
-                      for="lama"
-                      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-800"
-                      >Lama?</label
-                  >
-              </div>
-          </div>
-          
-          <script>
-              document.addEventListener("DOMContentLoaded", function() {
-                  const checkboxes = document.querySelectorAll('.checkbox');
-          
-                  checkboxes.forEach(checkbox => {
-                      checkbox.addEventListener('change', function() {
-                          if (this.checked) {
-                              checkboxes.forEach(cb => {
-                                  if (cb !== this) {
-                                      cb.checked = false;
-                                  }
-                              });
-                          }
-                      });
-                  });
-              });
-          </script>
+              <label for="condition-input">Condition</label>
+              <input type="text" id="condition-input" placeholder="Baru/Lama?" name="condition"/> 
             </div>
+            <br></br>
             <div class="flex items-start mb-6">
               <div class="flex items-center h-5">
                 <input
-                  id="availibility"
+                  id="available-input"
                   type="checkbox"
-                  value=""
+                  name="available"
                   class="w-add h-add border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
                   required
                 />
               </div>
               <label
-                for="availibility"
+                for="available-input"
                 class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-800"
                 >Available?</label
               >
             </div>
+            </div>
             <div>
                 <button
                 type="submit"
-                class="text-white bg-black hover:bg-blue-800 focus:ring-add focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-black dark:hover:bg-yellow-900 dark:focus:ring-blue-800"
-                value="create"
+                class="text-white bg-black hover:bg-blue-800 focus:ring-add focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-black dark:hover:bg-yellow-900 dark:focus:ring-blue-800 mt-10"
+                value="Create"
+                id="submit-button"
                 >
                 Create
               </button>
